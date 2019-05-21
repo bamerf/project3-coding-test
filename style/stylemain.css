@@ -29,7 +29,7 @@ div.name input{
   border-bottom: 2px solid red;
 }
 
-div.name div.namebttn{
+/* div.name div.namebttn{
   position: relative;
   text-align: center; 
   color: black;
@@ -39,7 +39,7 @@ div.name div.namebttn{
   width: 5rem;
   opacity: .3;
   transition: 0.3s;
-}
+} */
 
 div.name div.namebttn:hover{
   opacity: 1;
