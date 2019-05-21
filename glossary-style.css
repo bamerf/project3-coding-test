@@ -1,0 +1,175 @@
+/* --- Reset --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+/* --- Globals --- */
+
+html {
+  scroll-behaviour: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+.site-container {
+  display: flex;
+}
+
+
+
+/* --- Sidebar --- */
+.glossary-sidebar {
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+  font-family: arial;
+  border: 1px solid #f2f2f2;
+}
+
+/* remove sidebar scrollbar in chrome */
+.glossary-sidebar::-webkit-scrollbar { width: 0 !important }
+/* remove sidebar scrollbar in firefox */
+.glossary-sidebar { overflow: -moz-scrollbars-none; }
+/* remove sidebar scrollbar in IE */
+.glossary-sidebar { -ms-overflow-style: none; }
+
+.glossary-sidebar a {
+  display: flex;
+  flex-direction: vertical;
+  justify-content: center;
+  text-decoration: none;
+  color: #e0e0e0;
+  border: 1px solid #f2f2f2;
+  transition: 0.3s;
+  padding: 0.5em 0;
+}
+
+.glossary-sidebar a:hover {
+  color: black;
+}
+
+.glossary-sidebar ul {
+  font-size: 4em;
+  align-items: center;
+}
+
+
+
+/* --- main --- */
+main {
+  flex: 1;
+  position: relative;
+  margin-left: 10vw;
+  font-family: arial;
+}
+
+
+
+/* --- definitions --- */
+
+.definition-list {
+  border: 1px solid #f2f2f2;
+  text-align: center; 
+}
+
+.definition-list li {
+  padding: 1.2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definition-title {
+  text-decoration: none;
+  font-size: 2em;
+  color: #e0e0e0;
+  transition: 0.3s;
+}
+
+.definition-title:hover {
+  color: black;
+}
+
+.definition-selected {
+  padding: 2em 0;
+  color: red;
+  transition: 0.5s;
+}
+
+/* --- definition details --- */
+
+.definition-details {
+  border: 1px solid #f2f2f2;
+  padding: 1em 8em;
+}
+
+.definition-details p {
+  font-size: 1.2em;
+}
+
+
+/* --- definition footer --- */
+
+.definition-details footer {
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+  color: #e0e0e0;
+}
+
+.definition-details footer a {
+  padding-right: 1em;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s
+}
+
+.definition-details footer a:last-child {
+  padding-right: 0;
+}
+
+.definition-details footer a:hover {
+  color: black;
+}
+
+.tag-icon {
+  padding-right: 0.3em;
+}
+
+.hidden {
+  display: none;
+}
