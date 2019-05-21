@@ -1,4 +1,4 @@
-// dom elements
+// DOM elements
 const sidebarLetters = document.querySelectorAll('.glossary-sidebar li');
 const definitions = document.querySelectorAll('.definition-list li');
 
