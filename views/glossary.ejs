@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../public/css/glossary-style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Glossary</title>
+  </head>
+  <body>
+
+    <div class="site-container">
+      <nav class="glossary-sidebar">
+        <ul>
+          <li><a href="#">A</a></li>
+          <li><a href="#">B</a></li>
+          <li><a href="#">C</a></li>
+          <li><a href="#">D</a></li>
+          <li><a href="#">E</a></li>
+          <li><a href="#">F</a></li>
+          <li><a href="#">G</a></li>
+          <li><a href="#">H</a></li>
+          <li><a href="#">I</a></li>
+          <li><a href="#">J</a></li>
+          <li><a href="#">K</a></li>
+          <li><a href="#">L</a></li>
+          <li><a href="#">M</a></li>
+          <li><a href="#">N</a></li>
+          <li><a href="#">O</a></li>
+          <li><a href="#">P</a></li>
+          <li><a href="#">Q</a></li>
+          <li><a href="#">R</a></li>
+          <li><a href="#">S</a></li>
+          <li><a href="#">T</a></li>
+          <li><a href="#">U</a></li>
+          <li><a href="#">V</a></li>
+          <li><a href="#">W</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Y</a></li>
+          <li><a href="#">Z</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section class="definition-list">
+          <ul>
+
+            <% words.forEach(row => { %>
+            <li>
+              <a href="#" class="definition-title"><%= row.word %></a>
+              <article class="detail">
+                  <p><%= row.description %></p>
+                  <footer>
+                    <a href="#"><i class="fas fa-tag tag-icon"></i>html</a>
+                    <a href="#"><i class="fas fa-tag tag-icon"></i>javascript</a>
+                  </footer>
+                </article>
+            </li>
+            <% }) %>
+
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="../public/javascript/glossary.js"></script>
+    
+  </body>
+</html>

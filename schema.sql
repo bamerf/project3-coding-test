@@ -20,4 +20,4 @@ CREATE TABLE leaderboard(
   id SERIAL PRIMARY KEY,
   time INTEGER,
   correct_answers INTEGER
-)
+);
