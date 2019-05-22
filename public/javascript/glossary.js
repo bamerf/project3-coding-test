@@ -7,7 +7,6 @@ const definitionDetails = document.querySelectorAll('.detail')
 
 
 // functions
-
 const collapsibleDetail = event => {
   event.target.classList.toggle('active');
   const detail = event.target.parentNode.querySelector('.detail')
@@ -17,6 +16,9 @@ const collapsibleDetail = event => {
     detail.style.maxHeight = detail.scrollHeight + 'px';
   }
 }
+
+
+
 
 
 

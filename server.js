@@ -40,7 +40,6 @@ app.get('/', (req, res) => {
 })
 
 
-
 app.get('/glossary', (req, res) => {
   client.connect()
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
