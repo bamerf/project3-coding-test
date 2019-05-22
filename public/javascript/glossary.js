@@ -12,7 +12,7 @@ const collapsibleDetail = event => {
   event.target.classList.toggle('active');
 
   // check if user clicked on p or title before doing query selector!
-  
+  // if (event.target)
   const detail = event.target.parentNode.querySelector('.detail')
   if (detail.style.maxHeight) {
     detail.style.maxHeight = null;
