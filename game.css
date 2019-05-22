@@ -1,0 +1,199 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+}
+
+.parent {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-content: center;
+}
+
+.section1 {
+  margin-top: 3rem;
+}
+
+.section1 > h1 {
+  text-align: center;
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 4rem;
+  text-shadow:
+-2px -2px 0 #000,
+2px -2px 0 #000,
+-2px 2px 0 #000,
+2px 2px 0 #000;
+  color: white;
+}
+
+.word {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  text-align: center;
+  font-size: 3rem;
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+  resize: none;
+  overflow: hidden;
+  outline: none;
+}
+
+.input:focus {
+  border-bottom: 2px solid dodgerblue;
+}
+
+.num-char {
+  display: inline-block;
+}
+
+.description {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+.hint1-card {
+  background-color: transparent;
+  width: 600px;
+  height: 70px;
+  perspective: 1000px;
+  margin-bottom: 0.7rem;
+}
+
+.hint1-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.hint1-card:hover .hint1-card-inner {
+  transform: rotateX(180deg);
+}
+
+.hint1-card-front, .hint1-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.hint1-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.hint1-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.hint2-card {
+  background-color: transparent;
+  width: 600px;
+  height: 70px;
+  perspective: 1000px;
+  margin-bottom: 0.7rem;
+}
+
+.hint2-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.hint2-card:hover .hint2-card-inner {
+  transform: rotateX(180deg);
+}
+
+.hint2-card-front, .hint2-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.hint2-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.hint2-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.hint3-card {
+  background-color: transparent;
+  width: 600px;
+  height: 70px;
+  perspective: 1000px;
+  margin-bottom: 0.7rem;
+}
+
+.hint3-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.hint3-card:hover .hint3-card-inner {
+  transform: rotateX(180deg);
+}
+
+.hint3-card-front, .hint3-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.hint3-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.hint3-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+footer {
+  margin-top: 12rem;
+}
+
+.glossary-link {
+ background-color: rgb(190, 190, 190);
+ color: white;
+ font-size: 2rem;
+}
+
+.section2 {
+  margin-top: 13rem;
+}
