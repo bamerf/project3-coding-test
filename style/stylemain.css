@@ -44,7 +44,7 @@ div.name input{
 div.name div.namebttn:hover{
   opacity: 1;
   color: red;
-  border: 1px solid black;
+ 
 } 
 
 div.selector{
@@ -60,7 +60,6 @@ div.selector{
 div.selector div.glossbttn{
   text-align: center; 
   color:black;
-  border: 1px solid transparent black;
   border-radius: 1rem;
   font-size: 3rem; 
   width: 13rem;
@@ -72,13 +71,11 @@ div.selector div.glossbttn{
 div.selector div.glossbttn:hover{
   opacity: 1;
   color: red;
-  border: 1px solid black;
 } 
 
 div.selector div.gamebttn{
   text-align: center; 
   color: black;
-  border: 1px solid transparent black;
   border-radius: 1rem;
   font-size: 3rem; 
   width: 13rem;
@@ -89,7 +86,6 @@ div.selector div.gamebttn{
 div.selector div.gamebttn:hover{
   opacity: 1;
   color: red;
-  border: 1px solid black;
 } 
 
 
