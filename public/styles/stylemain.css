@@ -1,0 +1,95 @@
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+}
+
+img.head-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+div.name{
+  display: flex; 
+  flex-direction: row; 
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+}
+
+div.name input{
+  font-size: 25px;
+  width: 55%;
+  height:3.2rem;
+  margin-right: 1rem;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+/* div.name div.namebttn{
+  position: relative;
+  text-align: center; 
+  color: black;
+  border: 1px solid transparent black;
+  border-radius: 1rem;
+  font-size: 3rem; 
+  width: 5rem;
+  opacity: .3;
+  transition: 0.3s;
+} */
+
+div.name div.namebttn:hover{
+  opacity: 1;
+  color: red;
+  border: 1px solid black;
+} 
+
+div.selector{
+  display: flex; 
+  flex-direction: row; 
+  margin: auto;
+  width: 30%;
+  margin-top: 6rem;
+  justify-content: space-between;
+}
+
+
+div.selector div.glossbttn{
+  text-align: center; 
+  color:black;
+  border: 1px solid transparent black;
+  border-radius: 1rem;
+  font-size: 3rem; 
+  width: 13rem;
+  opacity: .3;
+  transition: 0.3s;
+  
+}
+
+div.selector div.glossbttn:hover{
+  opacity: 1;
+  color: red;
+  border: 1px solid black;
+} 
+
+div.selector div.gamebttn{
+  text-align: center; 
+  color: black;
+  border: 1px solid transparent black;
+  border-radius: 1rem;
+  font-size: 3rem; 
+  width: 13rem;
+  opacity: .3;
+  transition: 0.3s;
+}
+
+div.selector div.gamebttn:hover{
+  opacity: 1;
+  color: red;
+  border: 1px solid black;
+} 
+
+
