@@ -1,18 +1,15 @@
-// DOM elements
+// get DOM elements
 const sidebarLetters = document.querySelectorAll('.glossary-sidebar li');
 const definitionList = document.querySelector('.definition-list');
 const definitionItem = document.querySelectorAll('.definition-list li');
 const definitionDetails = document.querySelectorAll('.detail')
 
 
+
 // functions
 
 const collapsibleDetail = event => {
-  console.log('clicked');
   event.target.classList.toggle('active');
-
-  // check if user clicked on p or title before doing query selector!
-  // if (event.target)
   const detail = event.target.parentNode.querySelector('.detail')
   if (detail.style.maxHeight) {
     detail.style.maxHeight = null;
@@ -21,9 +18,12 @@ const collapsibleDetail = event => {
   }
 }
 
-
-// function to make a new definition list item
 const makeNewListItem = () => {
+
+}
+
+
+const getDatabaseItems = () => {
 
 }
 
