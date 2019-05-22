@@ -8,8 +8,6 @@ INSERT INTO words(word, description, hints, url) VALUES ('JSON', 'an open-standa
 
 INSERT INTO words(word, description, hints, url) VALUES ('REPL', 'is a simple, interactive computer programming environment that takes single user inputs, evaluates them, and returns the result to the user', ARRAY ['Pry', 'Console', 'Terminal'], 'https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop');
 
-
-
 INSERT INTO mytable(word,description,hint_1,hint_2,hint_3,url,SQL) VALUES ('abstractions','Objects and Functions','Duis aute irure dolor in reprehenderit in voluptate.','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat','https://en.wikipedia.org/wiki/Cat','INSERT INTO words (abstractions, Objects and Functions');
 INSERT INTO mytable(word,description,hint_1,hint_2,hint_3,url,SQL) VALUES ('activerecord','ActiveRecord is a Ruby library for working with Relational SQL Databases like MySQL and Postgres.','Can be used in ruby','Used in Relational SQL Databases','a Ruby library','https://en.wikipedia.org/wiki/Cat',NULL);
 INSERT INTO mytable(word,description,hint_1,hint_2,hint_3,url,SQL) VALUES ('ajax','Ajax (Asynchronous JavaScript and XML) a method of building interactive applications for the Web that process user requests immediately.','Asynchronous','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat','https://en.wikipedia.org/wiki/Cat',NULL);
