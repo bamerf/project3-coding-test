@@ -1,5 +1,5 @@
-
 winCount = 0
+guessWord = "javascript"
 
 if (guessWord.includes(" ")) {
   $('.input').css({height: '100px'})
@@ -18,7 +18,6 @@ $(document).ready(function() {
   $('.input').keyup(function() {
     $('.num-char').text(guessWord.length - $('.input').val().length)
   })
-
 
   //Correct Answer
   $('.input').keyup(function() {
@@ -40,7 +39,6 @@ $(document).ready(function() {
   $('.hint1').on('click', function(e) {
     e.target.closest('.hint1').classList.add('reveal')
   })
-=======
   // Green for Correct Answer & Description
   $('.input').keyup(function() {
     if (guessWord === $('.input').val()) {
