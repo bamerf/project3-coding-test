@@ -10,20 +10,10 @@ INSERT INTO words(word, description, hints, url) VALUES ('REPL', 'is a simple, i
 
 
 
-CREATE TABLE words(
-   word        VARCHAR(29) NOT NULL PRIMARY KEY
-  ,description VARCHAR(151) NOT NULL
-  ,hint1       VARCHAR(52) NOT NULL
-  ,hint2       VARCHAR(49) NOT NULL
-  ,hint3       VARCHAR(33) NOT NULL
-  ,url         VARCHAR(33)
-  ,SQL         VARCHAR(54)
-);
+
 INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('abstractions','Objects and Functions','Duis aute irure dolor in reprehenderit in voluptate.','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat');
 INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('activerecord','ActiveRecord is a Ruby library for working with Relational SQL Databases like MySQL and Postgres.','Can be used in ruby','Used in Relational SQL Databases','a Ruby library');
-INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('ajax','Ajax (Asynchronous JavaScript and XML) a 
-method of building interactive applications for 
-the Web that process user requests immediately.','Asynchronous','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat');
+INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('ajax','Ajax (Asynchronous JavaScript and XML) a method of building interactive applications for the Web that process user requests immediately.','Asynchronous','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat');
 INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('API','Application programming interface (API)  it is a set of clearly defined methods that allows software applications to communicate with one another','Duis aute irure dolor in reprehenderit in voluptate.','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat');
 INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('argument','Arguments are values passed to the function when it is invoked.','Duis aute irure dolor in reprehenderit in voluptate.','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat');
 INSERT INTO words(word,description,hint1,hint2,hint3) VALUES ('array','An array is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key.','Duis aute irure dolor in reprehenderit in voluptate.','Velit esse cillum dolore eu fugiat nulla pariatur','Excepteur sint occaecat cupidatat');
