@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../public/css/glossary-style.css" type="text/css" rel="stylesheet">
+    <link href="/css/glossary-style.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Glossary</title>
   </head>
   <body>
-
     <div class="site-container">
       <nav class="glossary-sidebar">
         <ul>
@@ -49,7 +48,7 @@
 
             <% words.forEach(row => { %>
             <li>
-              <a href="#" class="definition-title"><%= row.word %></a>
+              <h2 class="definition-title"><%= row.word %></h2>
               <article class="detail">
                   <p><%= row.description %></p>
                   <footer>
@@ -65,7 +64,7 @@
       </main>
     </div>
 
-    <script src="../public/javascript/glossary.js"></script>
+    <script src="/javascript/glossary.js"></script>
     
   </body>
 </html>
