@@ -15,8 +15,8 @@ img.head-logo{
 .name{
   display: flex;  
   margin: auto;
-  width: 60%;
-  padding-left: 5rem;
+  width: auto;
+  padding-left: 7rem;
 }
 
 .name label{
@@ -36,6 +36,9 @@ div.selector{
   justify-content: space-between;
 }
 
+.name form{
+  margin: auto;
+}
 
 div.selector div.glossbttn{
   text-align: center; 
