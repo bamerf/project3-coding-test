@@ -4,7 +4,7 @@
   "description": "A game designed to help with revision of terms learned throughout our Software Engineering Immersive.",
   "main": "jquery.lettering-0.6.1.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
     "express": "^4.17.0",
     "lodash": "^4.17.11",
     "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
   }
 }
