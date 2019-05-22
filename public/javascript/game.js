@@ -1,3 +1,4 @@
+winCount = 0
 guessWord = "javascript"
 
 if (guessWord.includes(" ")) {
@@ -18,14 +19,25 @@ $(document).ready(function() {
     $('.num-char').text(guessWord.length - $('.input').val().length)
   })
 
-  // Green for Correct Answer & Description
+  //Correct Answer
   $('.input').keyup(function() {
     if (guessWord === $('.input').val()) {
       $('.input').css({outline: "solid green"})
+
       $('.description').text(description)
+
+      winCount += 1;
+
     }
   })
 
-  
+  //Hints
+  $('.hint1-card-back').text(hint1Text)
+  $('.hint2-card-back').text(hint2Text)
+  $('.hint3-card-back').text(hint3Text)
+
+  $('.hint1').on('click', function(e) {
+    e.target.closest('.hint1').classList.add('reveal')
+  })
   
 })
