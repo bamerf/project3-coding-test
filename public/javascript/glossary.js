@@ -3,6 +3,7 @@ const sidebarLetters = document.querySelectorAll('.glossary-sidebar li');
 const definitionList = document.querySelector('.definition-list');
 const definitionItem = document.querySelectorAll('.definition-list li');
 const definitionDetails = document.querySelectorAll('.detail')
+const definitionTitles = document.querySelectorAll('.definition-title')
 
 
 
@@ -17,9 +18,17 @@ const collapsibleDetail = event => {
   }
 }
 
+const giveEachNewLetterID = () => {
+  console.log('adding id to first letter');
+  console.log(definitionTitles[0].textContent[0]);
 
+  definitionTitles.forEach( title => {
+    let currentLetter = title.textContent[0]
+  });
+  
+}
 
-
+giveEachNewLetterID()
 
 
 // event listeners
