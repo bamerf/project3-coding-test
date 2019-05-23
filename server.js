@@ -1,8 +1,5 @@
 const _ = require('lodash')
 
-
-
-
 // start up server with npm start
 // read more: https://expressjs.com/
 const express = require('express');
@@ -19,7 +16,33 @@ const client = new Client({
   database: 'project3'
 })
 
-client.connect()
+// Database Parameters.
+// Data Table names, etc.
+const dt_words = "words"
+const dt_tags = "tags"
+const dt_leaderboard = "leaderboard"
+
+const getRandomWords = (words, num) => _.sampleSize(words, num) 
+
+
+// Connect to client
+function connect(){
+  // check client is not connected
+  if(!client.connection.stream.connecting){
+      client.connect()
+  }
+  console.log(`Connection Status:  ${client.connection.stream.connecting}`)
+}
+connect();
+
+function getWords(){
+  connect()
+  client.query(`SELECT * FROM ${dt_words}`)
+  .then(res => {
+      return ((res.rows))
+  })
+  .catch(e => console.log(e))
+}
 
 // set the view directory to ./views
 app.set("views", `./views`)
@@ -31,11 +54,6 @@ app.set('view engine', 'ejs')
 // middleware function to serve static files from public
 // read more: https://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
-
-
-
-
-
 
 // ------- Routes -------
 app.get('/', (req, res) => {
@@ -55,14 +73,15 @@ app.get('/glossary', (req, res) => {
   })
 })
 
-const getRandomWords = words => _.sampleSize(words, 10) 
+
 
 app.get('/api/words', (req, res) => {
-  client.query('SELECT * FROM words', [], (err, dbresponse) => {
-    res.json( {
-      words: getRandomWords(dbresponse.rows)
+  connect()
+  client.query(`SELECT * FROM ${dt_words}`)
+    .then(db_res => {
+        res.send(getRandomWords(db_res.rows, 10))
     })
-  })
+    .catch(e => console.log(e))
 })
 
 app.get('/game', (req, res) => {
@@ -79,21 +98,4 @@ app.get('/results', (req, res) => {
 app.get('/main', (req, res) => {
   res.render('main', {
   });
-})
-
-// https://node-postgres.com/
-
-
-app.get('/allwords', (req, res) => {
-  // database query
-  // read more: https://expressjs.com/en/guide/database-integration.html
-  client.connect()
-  client.query('SELECT * FROM words', [], (err, dbresponse) => {
-    // log dbresponse to server
-    // dbresponse.rows.forEach(row => { console.log(row.word) })
-    client.end()
-    res.render('allwords', {
-      words: dbresponse.rows
-    })
-  })
 })

@@ -76,5 +76,4 @@ $(document).ready(function() {
   // Game start
   $('.start-btn').on('click', gameStart)
 
-
 })
