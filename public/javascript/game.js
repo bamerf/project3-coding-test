@@ -1,5 +1,5 @@
-winCount = 0
-words = null
+var winCount = 0;
+var words = null;
 
 //jQuery wait for page load
 $(document).ready(function() {
@@ -12,7 +12,7 @@ $(document).ready(function() {
   
     function handleDone(res) {
       words = res.words;
-      res.words.forEach(function(word){
+      words.forEach(function(word){
         console.log(word)
       })
     }
@@ -28,8 +28,9 @@ $(document).ready(function() {
     
     $('.start-btn').fadeOut("fast")
     $('.hint1').addClass('reveal')
-    
-    for(let i = 0; i < 10; i++) {
+    const numberOfWords = 10;
+
+    for (let i = 0; i < numberOfWords; i++) {
 
       do {
 
@@ -60,14 +61,14 @@ $(document).ready(function() {
         
         //Correct Answer
         $('.input').keyup(function() {
-          if (words[i].word === $('.input').val()) {
+          if (words[i].word.toLowerCase() === $('.input').val().toLowerCase()) {
             $('.input').css({outline: "solid green"})
             
             winCount += 1;
           }
         })
 
-      } while(words[i].word !== $('.input').val()) {
+      } while (words[i].word !== $('.input').val()) {
 
         // Change input size base on number of words
         var my_string = words[i].word;
