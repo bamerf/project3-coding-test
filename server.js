@@ -84,8 +84,10 @@ app.get('/api/words', (req, res) => {
     .catch(e => console.log(e))
 })
 
+
 app.get('/game', (req, res) => {
   res.render('game', {
+    name: 'Mister Meeseeks' // pass in variable here
   });
 })
 

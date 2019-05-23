@@ -11,20 +11,21 @@
   <h1> <img class= "head-logo" src="/img/devtest.png"> </h1>
   
   <div class="name">
-    <form action="post">
-        <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
-        <label for="nme"><span>Enter name:</span></label>
-  </div>     
+    <!-- Need to send name to server -->
+    <form method="post" action="/game">
+        <input type="text" name="name[name]" class="question" id="name" required autocomplete="off">
+        <label for="name"><span>Enter name:</span></label>
+  </div>
 </form>
 
   <div class="selector">
       <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-                <div class="glossbttn">Glossay</div>
+                <div class="glossbttn">Glossary</div>
             </div>
             <div class="flip-card-back">
-                <h3>learn the words.</h3>
+                <h3>learn the words</h3>
             </div>
           </div>
         </div>
@@ -35,7 +36,7 @@
                   <div class="gamebttn">Game</div></a>
               </div>
               <div class="flip-card-back">
-                <h3>play the game.</h3>
+                <h3>play the game</h3>
               </div>
             </div>
           </div>
