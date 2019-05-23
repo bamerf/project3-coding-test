@@ -37,30 +37,27 @@ html {
   border: 0;
   padding: 0;
 }
-h1.logoTitle{
-  display: flex;
-  margin-left: 12rem;
-}
-img {
-  width: auto;
-  height: 100px;
-  margin: auto
-}
 
-a{
-  text-align: center; 
-  color:black;
-  border-radius: 1rem;
-  font-size: 3rem; 
-  width: 13rem;
-  opacity: .3;
-  transition: 0.3s;
+img {
+  width: 100%;
+  height: auto;
+  border: 0;
 }
 
 .site-container {
   display: flex;
 }
 
+img.headerimg{
+  height: 100px;
+  margin: auto;
+  width: auto;
+}
+
+h1.logoTitle{
+  display: flex;
+  margin-left: 12rem;
+}
 
 
 /* --- Sidebar --- */
