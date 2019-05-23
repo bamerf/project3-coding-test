@@ -19,11 +19,15 @@ const collapsibleDetail = event => {
 }
 
 const giveEachNewLetterID = () => {
-  console.log('adding id to first letter');
-  console.log(definitionTitles[0].textContent[0]);
-
-  definitionTitles.forEach( title => {
-    let currentLetter = title.textContent[0]
+  let previousLetter;
+  let currentLetter;
+  definitionTitles.forEach(title => {
+    currentLetter = title.textContent[0].toLowerCase();
+    if (currentLetter != previousLetter) {
+      // console.log(`first occurrence is '${title.textContent.toLowerCase()}''`)
+      title.setAttribute('id', currentLetter)
+    }
+    previousLetter = currentLetter;
   });
   
 }
