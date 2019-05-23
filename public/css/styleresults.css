@@ -26,6 +26,9 @@ body{
   width: 35%;
 }
 
+a{
+  color: black;
+}
 
 h2{
   border-bottom: red solid 3px;

@@ -43,10 +43,21 @@ img {
   height: auto;
   border: 0;
 }
+
 .site-container {
   display: flex;
 }
 
+img.headerimg{
+  height: 100px;
+  margin: auto;
+  width: auto;
+}
+
+h1.logoTitle{
+  display: flex;
+  margin-left: 12rem;
+}
 
 
 /* --- Sidebar --- */
