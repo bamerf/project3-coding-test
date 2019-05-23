@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+svg{
+    width: 100%;
+}
+
+.paper {
+    animation-name: paper-drop;
+    /* animation-duration: 5s; */
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes paper-drop {
+    0% { transform: translate3d(0, 0, 0); opacity: 0;}
+    50% { opacity: 0.2;}
+    100% { transform: translate3d(0, initial, 0); opacity: 1;}
+}
+
+#paper-0{
+    animation-duration: 0.5s;
+}
+
+#paper-1{
+    animation-duration: 0.8s;
+}
+
+#paper-2{
+    animation-duration: 1.25s;
+}
+
+#paper-3{
+    animation-duration: 1.75s;
+}
+
+#paper-4{
+    animation-duration: 2s;
+}
+
+#paper-5{
+    animation-duration: 2.25s;
+}
+
+#paper-6{
+    animation-duration: 2.5s;
+}
+
+#paper-7{
+    animation-duration: 3.0s;
+}
+
+#paper-8{
+    animation-duration: 3.5s;
+}
+
+#paper-9{
+    animation-duration: 3.75s;
+}
+
+#paper-10{
+    animation-duration: 4s;
+}
