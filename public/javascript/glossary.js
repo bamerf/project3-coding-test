@@ -32,10 +32,11 @@ const giveEachNewLetterID = () => {
   
 }
 
-giveEachNewLetterID()
-
 
 // event listeners
 definitionItem.forEach(definition => {
   definition.addEventListener('click', collapsibleDetail)
 })
+
+
+giveEachNewLetterID()
