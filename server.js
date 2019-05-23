@@ -12,9 +12,7 @@ app.listen(port, () => {
 // read more: https://node-postgres.com/
 const { Client } = require('pg')
 const client = new Client({
-  database: 'project3',
-  user: 'bam',
-  password: '12345'
+  database: 'project3'
 })
 
 client.connect()
@@ -66,6 +64,11 @@ app.get('/game', (req, res) => {
 app.get('/results', (req, res) => {
   res.render('results', {
     
+  });
+})
+
+app.get('/main', (req, res) => {
+  res.render('main', {
   });
 })
 

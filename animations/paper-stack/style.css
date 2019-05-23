@@ -1,16 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-svg{
+/* svg{
     width: 100%;
 }
 
 .paper {
     animation-name: paper-drop;
-    /* animation-duration: 5s; */
+    animation-duration: 5s;
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
 }
@@ -63,4 +57,4 @@ svg{
 
 #paper-10{
     animation-duration: 4s;
-}
+} */
