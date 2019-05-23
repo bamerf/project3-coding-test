@@ -14,12 +14,9 @@ body{
 
 .winner{
   margin: inherit;
+  width: 35%;
 }
 
-div.winner img.stack{
-  height: 450px;
-  width: 450px;
-}
 
 h2{
   border-bottom: red solid 3px;
