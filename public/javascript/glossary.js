@@ -3,6 +3,7 @@ const sidebarLetters = document.querySelectorAll('.glossary-sidebar li');
 const definitionList = document.querySelector('.definition-list');
 const definitionItem = document.querySelectorAll('.definition-list li');
 const definitionDetails = document.querySelectorAll('.detail')
+const definitionTitles = document.querySelectorAll('.definition-title')
 
 
 
@@ -17,9 +18,21 @@ const collapsibleDetail = event => {
   }
 }
 
+const giveEachNewLetterID = () => {
+  let previousLetter;
+  let currentLetter;
+  definitionTitles.forEach(title => {
+    currentLetter = title.textContent[0].toLowerCase();
+    if (currentLetter != previousLetter) {
+      // console.log(`first occurrence is '${title.textContent.toLowerCase()}''`)
+      title.setAttribute('id', currentLetter)
+    }
+    previousLetter = currentLetter;
+  });
+  
+}
 
-
-
+giveEachNewLetterID()
 
 
 // event listeners

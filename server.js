@@ -45,7 +45,8 @@ app.get('/glossary', (req, res) => {
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
     client.end()
     res.render('glossary', {
-      words: dbresponse.rows
+      words: dbresponse.rows,
+      name: 'dog'
     })
   })
 })
