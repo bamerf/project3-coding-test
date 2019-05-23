@@ -1,8 +1,5 @@
 const _ = require('lodash')
 
-
-
-
 // start up server with npm start
 // read more: https://expressjs.com/
 const express = require('express');
@@ -21,7 +18,16 @@ const client = new Client({
   password: '12345'
 })
 
-client.connect()
+
+// Connect to client
+function connect(){
+  // check client is not connected
+  if(!client.connection.stream.connecting){
+      client.connect()
+  }
+  console.log(`Connection Status:  ${client.connection.stream.connecting}`)
+}
+connect();
 
 // set the view directory to ./views
 app.set("views", `./views`)
@@ -33,11 +39,6 @@ app.set('view engine', 'ejs')
 // middleware function to serve static files from public
 // read more: https://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
-
-
-
-
-
 
 // ------- Routes -------
 app.get('/', (req, res) => {
