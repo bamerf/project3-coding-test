@@ -36,7 +36,7 @@ function getWordCount(phrase){
 }
 
 function setInputHeight(wordCount){
-  var height = `${Number(wordCount * 50)}`;
+  let height = `${Number(wordCount * 50)}`;
   $('.input').css({height: height+"px"})
 }
 
@@ -80,31 +80,31 @@ function disableInput(){
   $('.input').prop('disabled', true);
 }
 
-function resetInputField(){
+function enableInput() {
   $('.input').prop('disabled', false);
   $('.input').css({outline: "none"})
 }
 
-function hideNextBtn(){
+function hideNextBtn() {
   $('.next-btn').fadeOut("fast")  
 }
 
-function showNextBtn(){
+function showNextBtn() {
   $('.next-btn').fadeIn("fast")
 }
 
-function startGameTimer(){
-  setTimeout(endOfGame,60000)
+function startGameTimer() {
+  setTimeout(endOfGame,2000)
 }
 
-function endOfGame(){
+function endOfGame() {
   console.log('game has ended!')
   disableInput()
   hideNextBtn()
   showEndGameOverlay()
 }
 
-function showEndGameOverlay(){
+function showEndGameOverlay() {
   $('.overlay').css({visibility: 'visible'})
 }
 
@@ -142,7 +142,7 @@ function correctGuessCSS(){
   // Loop through the words
   // for(let i = 0; i < words.length;) {
 
-    // if($('.input').val() == words[i].word){
+    // if($('.input').val() == words[i].word) {
     //   $('.input').css({outline: "solid green"})
     //   // winCount += 1;
     //   i++;
@@ -165,4 +165,25 @@ function correctGuessCSS(){
     //   e.target.closest('.hint1').classList.add('reveal')
     // })
 
+<<<<<<< HEAD
+=======
+    // do {
+      //Correct Answer
+
+      // if($('.input').val() == words[i].word) {
+      //   $('.input').css({outline: "solid green"})
+      //     // winCount += 1;
+      //     console.log("you guessed right!")
+      // }
+
+      // $('.input').keyup(function() {
+      //   if (words[i] === $('.input').val()) {
+      //     $('.input').css({outline: "solid green"})
+          
+      //     winCount += 1;
+      //   }
+      // })
+    // } while(words[i] !== $('.input').val())
+
+>>>>>>> game post route made
   // }
