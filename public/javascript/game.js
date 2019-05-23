@@ -19,6 +19,7 @@ $(document).ready(function() {
 
 const playGame = () => {
   startGameCSS()
+  startGameTimer()
   $('.input').keyup(function(e){
     if($('.input').val() == words[wordindex].word){
       wordCorrect()
@@ -87,6 +88,21 @@ function hideNextBtn(){
 
 function showNextBtn(){
   $('.next-btn').fadeIn("fast")
+}
+
+function startGameTimer(){
+  setTimeout(endOfGame,2000)
+}
+
+function endOfGame(){
+  console.log('game has ended!')
+  disableInput()
+  hideNextBtn()
+  showEndGameOverlay()
+}
+
+function showEndGameOverlay(){
+  $('.overlay').css({visibility: 'visible'})
 }
 
 
