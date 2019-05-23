@@ -9,9 +9,10 @@ img {
 }
 
 .parent {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
   height: 100%;
+  justify-content: center;
   align-content: center;
 }
 
@@ -20,8 +21,8 @@ img {
 }
 
 .section1 > h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-  font-family: 'Baloo Bhai', cursive;
   font-size: 4rem;
   text-shadow:
 -2px -2px 0 #000,
@@ -35,11 +36,11 @@ img {
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .input {
+  margin-top:5rem;
   text-align: center;
   font-size: 3rem;
   width: 300px;
@@ -60,14 +61,19 @@ img {
   display: inline-block;
 }
 
-.description {
+.start-btn {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 4rem;
   font-size: 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
 }
 
+.hint-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.hint1-card {
+[class^='hint'] {
   background-color: transparent;
   width: 600px;
   height: 70px;
@@ -75,7 +81,11 @@ img {
   margin-bottom: 0.7rem;
 }
 
-.hint1-card-inner {
+[class^='hint']:hover {
+  cursor: pointer;
+}
+
+.hint-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -84,104 +94,31 @@ img {
   transform-style: preserve-3d;
 }
 
-.hint1-card:hover .hint1-card-inner {
+.reveal .hint-inner {
   transform: rotateX(180deg);
 }
 
-.hint1-card-front, .hint1-card-back {
+.hint-front, .hint-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
-.hint1-card-front {
+.hint-front {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #bbb;
   color: black;
 }
 
-.hint1-card-back {
+.hint-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateX(180deg);
 }
 
-.hint2-card {
-  background-color: transparent;
-  width: 600px;
-  height: 70px;
-  perspective: 1000px;
-  margin-bottom: 0.7rem;
-}
-
-.hint2-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.hint2-card:hover .hint2-card-inner {
-  transform: rotateX(180deg);
-}
-
-.hint2-card-front, .hint2-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.hint2-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.hint2-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateX(180deg);
-}
-
-.hint3-card {
-  background-color: transparent;
-  width: 600px;
-  height: 70px;
-  perspective: 1000px;
-  margin-bottom: 0.7rem;
-}
-
-.hint3-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.hint3-card:hover .hint3-card-inner {
-  transform: rotateX(180deg);
-}
-
-.hint3-card-front, .hint3-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.hint3-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.hint3-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateX(180deg);
+footer {
+  margin-top: 12rem;
 }
 
 footer {
@@ -195,5 +132,84 @@ footer {
 }
 
 .section2 {
-  margin-top: 13rem;
+  height: 40%;
+  width: 20%;
+  margin-top: 4rem;
+}
+
+.shredder-body {
+  animation-name: body-shake;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  transform-origin: 50% 50%;
+}
+.resume {
+    animation-name: shred1;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.resume-shred {
+  animation-name: shred-paper;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+.resume-shred-1 {
+  animation-name: shred-paper;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0.75s;
+}
+.resume-shred-2 {
+  animation-name: shred-paper;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes shred-paper{
+  0% { opacity: 1; transform: scaleY(1);}
+  100% { opacity: 0;transform: scaleY(1.5);}
+}
+
+@keyframes shred1 {
+  0% { transform: translate3d(80px, 0, 0); }
+  100% { transform: translate3d(80px, 320px, 0); }
+}
+
+@keyframes body-shake {
+  0% { transform: rotate(.25deg); }
+  5% { transform: rotate(-.25deg); }
+  10% { transform: rotate(.25deg); }
+  15% { transform: rotate(-.25deg); }
+  20% { transform: rotate(.25deg); }
+  25% { transform: rotate(-.25deg); }
+  30% { transform: rotate(.25deg); }
+  35% { transform: rotate(-.25deg); }
+  40% { transform: rotate(.25deg); }
+  45% { transform: rotate(-.25deg); }
+  50% { transform: rotate(.25deg); }
+  55% { transform: rotate(-.25deg); }
+  60% { transform: rotate(.25deg); }
+  65% { transform: rotate(-.25deg); }
+  70% { transform: rotate(.25deg); }
+  75% { transform: rotate(-.25deg); }
+  80% { transform: rotate(.25deg); }
+  85% { transform: rotate(-.25deg); }
+  90% { transform: rotate(.25deg); }
+  95% { transform: rotate(-.25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+svg {
+  width: 600px;
+  height: 600px;
 }
