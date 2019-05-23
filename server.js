@@ -12,8 +12,12 @@ app.listen(port, () => {
 // read more: https://node-postgres.com/
 const { Client } = require('pg')
 const client = new Client({
-  database: 'project3'
+  database: 'project3',
+  user: 'bam',
+  password: '12345'
 })
+
+client.connect()
 
 // set the view directory to ./views
 app.set("views", `./views`)
@@ -41,9 +45,9 @@ app.get('/', (req, res) => {
 
 
 app.get('/glossary', (req, res) => {
-  client.connect()
+  // client.connect()
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
-    client.end()
+    // client.end()
     res.render('glossary', {
       words: dbresponse.rows,
       name: 'dog'
@@ -65,6 +69,8 @@ app.get('/results', (req, res) => {
   });
 })
 
+// https://node-postgres.com/
+
 
 app.get('/allwords', (req, res) => {
   // database query
@@ -73,7 +79,6 @@ app.get('/allwords', (req, res) => {
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
     // log dbresponse to server
     // dbresponse.rows.forEach(row => { console.log(row.word) })
-    console.log(client)
     client.end()
     res.render('allwords', {
       words: dbresponse.rows
