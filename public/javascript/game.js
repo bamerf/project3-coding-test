@@ -1,3 +1,4 @@
+console.log("<%words[0].word%>")
 winCount = 0
 guessWord = "javascript"
 

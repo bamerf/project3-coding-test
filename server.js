@@ -49,17 +49,18 @@ app.get('/glossary', (req, res) => {
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
     // client.end()
     res.render('glossary', {
-      words: dbresponse.rows,
-      name: 'dog'
+      words: dbresponse.rows
     })
   })
 })
 
 
 app.get('/game', (req, res) => {
-  res.render('game', {
-    
-  });
+  client.query('SELECT * FROM words', [], (err, dbresponse) => {
+    res.render('game', {
+      words: dbresponse.rows
+    })
+  })
 })
 
 
@@ -85,4 +86,3 @@ app.get('/allwords', (req, res) => {
     })
   })
 })
-
