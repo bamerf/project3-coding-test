@@ -1,3 +1,7 @@
+const _ = require('lodash')
+
+
+
 
 // start up server with npm start
 // read more: https://expressjs.com/
@@ -47,26 +51,30 @@ app.get('/', (req, res) => {
 app.get('/glossary', (req, res) => {
   // client.connect()
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
-    // client.end()
     res.render('glossary', {
       words: dbresponse.rows
     })
   })
 })
 
+const getRandomWords = words => _.sampleSize(words, 10) 
 
-app.get('/game', (req, res) => {
+app.get('/api/words', (req, res) => {
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
-    res.render('game', {
-      words: dbresponse.rows
+    res.json( {
+      words: getRandomWords(dbresponse.rows)
     })
   })
+})
+
+app.get('/game', (req, res) => {
+  res.render('game', {
+  });
 })
 
 
 app.get('/results', (req, res) => {
   res.render('results', {
-    
   });
 })
 
