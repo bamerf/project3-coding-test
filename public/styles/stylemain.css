@@ -24,8 +24,35 @@ img.head-logo{
   flex-direction: row; 
   margin: auto;
   width: 50%;
+  justify-content: center;
 }
 
+div.name input{
+  font-size: 25px;
+  width: 55%;
+  height:3.2rem;
+  margin-right: 1rem;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+/* div.name div.namebttn{
+  position: relative;
+  text-align: center; 
+  color: black;
+  border: 1px solid transparent black;
+  border-radius: 1rem;
+  font-size: 3rem; 
+  width: 5rem;
+  opacity: .3;
+  transition: 0.3s;
+} */
+
+div.name div.namebttn:hover{
+  opacity: 1;
+  color: red;
+  border: 1px solid black;
+} 
 
 div.selector{
   display: flex; 
