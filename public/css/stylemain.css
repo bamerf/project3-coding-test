@@ -40,6 +40,9 @@ div.selector{
   margin: auto;
 }
 
+a{
+  color: black;
+}
 input,
 span,
 label,
