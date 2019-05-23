@@ -1,10 +1,10 @@
-winCount = 0
-words = null
+var winCount = 0;
+var words = null;
 
-//jQuery wait for page load
+// jQuery wait for page load
 $(document).ready(function() {
 
-  //API call
+  // API call
   function getWords() {
     var options = {
       url: '/api/words'
@@ -12,7 +12,7 @@ $(document).ready(function() {
   
     function handleDone(res) {
       words = res.words;
-      res.words.forEach(function(word){
+      words.forEach(function(word){
         console.log(word)
       })
     }
@@ -28,8 +28,9 @@ $(document).ready(function() {
     
     $('.start-btn').fadeOut("fast")
     $('.hint1').addClass('reveal')
-    
-    for(let i = 0; i < 10; i++) {
+    const numberOfWords = 10;
+
+    for (let i = 0; i < numberOfWords; i++) {
 
       do {
 
@@ -49,7 +50,7 @@ $(document).ready(function() {
           $('.num-char').text(words[i].word.length - $('.input').val().length)
         })
 
-        //Hints
+        // Hints
         $('.hint1').children('.hint-inner').children
         ('.hint-back').text(words[i].hint1)
         $('.hint2').children('.hint-inner').children('.hint-back').text(words[i].hint2)
@@ -58,16 +59,16 @@ $(document).ready(function() {
           e.target.closest('.hint1').classList.add('reveal')
         })
         
-        //Correct Answer
+        // Correct Answer
         $('.input').keyup(function() {
-          if (words[i].word === $('.input').val()) {
+          if (words[i].word.toLowerCase() === $('.input').val().toLowerCase()) {
             $('.input').css({outline: "solid green"})
             
             winCount += 1;
           }
         })
 
-      } while(words[i].word !== $('.input').val()) {
+      } while (words[i].word.toLowerCase() !== $('.input').val().toLowerCase()) {
 
         // Change input size base on number of words
         var my_string = words[i].word;
@@ -85,7 +86,7 @@ $(document).ready(function() {
           $('.num-char').text(words[i].word.length - $('.input').val().length)
         })
   
-        //Hints
+        // Hints
         $('.hint1').children('.hint-inner').children
         ('.hint-back').text(words[i].hint1)
         $('.hint2').children('.hint-inner').children('.hint-back').text(words[i].hint2)
@@ -94,7 +95,7 @@ $(document).ready(function() {
           e.target.closest('.hint1').classList.add('reveal')
         })
         
-        //Correct Answer
+        // Correct Answer
         $('.input').keyup(function() {
           if (words[i].word === $('.input').val()) {
             $('.input').css({outline: "solid green"})
