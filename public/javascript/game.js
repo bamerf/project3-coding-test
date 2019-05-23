@@ -1,5 +1,5 @@
 winCount = 0
-words = []
+words = null
 guessWord = "something"
 hint1Text = "dsdsd"
 hint2Text = "sdffv"
@@ -11,26 +11,46 @@ $(document).ready(function() {
 
   //API call
   function getWords() {
-  
+    console.log("sdaff")
     var options = {
       url: '/api/words'
     }
   
     function handleDone(res) {
-      words.push(res)
+      words = res.words;
     }
   
     $.ajax(options).done(handleDone)
   
   }
 
-  $(window).on('load', getWords)
+  getWords()
+  // $(window).on('load', getWords)
 
-  // Indicate number of characters
-  $('.num-char').text(guessWord.length)
-  $('.input').keyup(function() {
-    $('.num-char').text(guessWord.length - $('.input').val().length)
-  })
+
+  // Game start
+  $('.start-btn').on('click', gameStart)
+  
+
+  const gameStart = () => {
+
+    for(let i = 0; i < 10; i++) {
+      
+      // Indicate number of characters
+      $('.num-char').text(words[i].length)
+      $('.input').keyup(function() {
+        $('.num-char').text(words[i].length - $('.input').val().length)
+      })
+    }
+
+
+
+  }
+  
+
+
+
+
 
   //Correct Answer
   $('.input').keyup(function() {
