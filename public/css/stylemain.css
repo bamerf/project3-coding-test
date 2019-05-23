@@ -40,42 +40,11 @@ div.selector{
   margin: auto;
 }
 
-div.selector div.glossbttn{
-  text-align: center; 
-  color:black;
-  border-radius: 1rem;
-  font-size: 3rem; 
-  width: 13rem;
-  opacity: .3;
-  transition: 0.3s;
-  
-}
-
-div.selector div.glossbttn:hover{
-  opacity: 1;
-  color: red;
-} 
-
-div.selector div.gamebttn{
-  text-align: center; 
-  color: black;
-  border-radius: 1rem;
-  font-size: 3rem; 
-  width: 13rem;
-  opacity: .3;
-  transition: 0.3s;
-}
-
-div.selector div.gamebttn:hover{
-  opacity: 1;
-  color: red;
-} 
-
 input,
 span,
 label,
 textarea {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans';
   display: block;
   margin: 10px;
   padding: 5px;
@@ -172,4 +141,52 @@ textarea.question + label > span {
   100% {
     opacity: 1;
   }
+}
+
+
+.flip-card {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  perspective: 500px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotatey(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+  font-size: 3rem; 
+  opacity: .3;
+}
+
+.flip-card-back {
+  background-color: white;
+  color:black;
+  transform: rotatey(180deg);
+  font-size: 3rem; 
+  opacity: .3;
 }

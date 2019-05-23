@@ -1,6 +1,7 @@
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: white;
+  text-decoration: none;
 }
 .header{
   display: flex;
@@ -46,6 +47,7 @@ div.selector{
   margin-top: 6rem;
   justify-content: space-between;
 }
+
 
 
 div.selector div.glossbttn{
