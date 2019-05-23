@@ -1,20 +1,32 @@
-console.log("<%words[0].word%>")
 winCount = 0
-guessWord = "javascript"
+words = []
+guessWord = "something"
+hint1Text = "dsdsd"
+hint2Text = "sdffv"
+hint3Text = "fdsfdbf"
+description = "ldjfdkhjf"
 
-if (guessWord.includes(" ")) {
-  $('.input').css({height: '100px'})
-}
-
-description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ducimus odit nulla itaque odio ipsa perspiciatis!"
-
-hint1Text = "This is your first hint"
-hint2Text = "This is your second hint"
-hint3Text = "This is your third hint"
-
+//jQuery wait for page load
 $(document).ready(function() {
 
-  // Indicate numer of characters
+  //API call
+  function getWords() {
+  
+    var options = {
+      url: '/api/words'
+    }
+  
+    function handleDone(res) {
+      words.push(res)
+    }
+  
+    $.ajax(options).done(handleDone)
+  
+  }
+
+  $(window).on('load', getWords)
+
+  // Indicate number of characters
   $('.num-char').text(guessWord.length)
   $('.input').keyup(function() {
     $('.num-char').text(guessWord.length - $('.input').val().length)
@@ -63,3 +75,7 @@ $(document).ready(function() {
   })
 
 })
+
+if (guessWord.includes(" ")) {
+  $('.input').css({height: '100px'})
+}
