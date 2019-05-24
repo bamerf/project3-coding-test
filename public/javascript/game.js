@@ -121,7 +121,7 @@ function showHint1(){
 }
 
 function loadHints(){
-    $('.hint1').children('.hint-inner').children('.hint-back').text(`${words[wordindex].hint1} (${'x'} characters and ${'x'} words)`)
+    $('.hint1').children('.hint-inner').children('.hint-back').text(`${words[wordindex].hint1} (${words[wordindex].word.length} characters and ${getWordCount(words[wordindex].word)} words)`)
     $('.hint2').children('.hint-inner').children('.hint-back').text(words[wordindex].hint2)
     $('.hint3').children('.hint-inner').children('.hint-back').text(words[wordindex].hint3)
 }
