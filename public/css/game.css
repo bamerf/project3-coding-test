@@ -39,16 +39,10 @@ img {
   margin-top: 3rem;
 }
 
-.section1 > h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-  font-size: 4rem;
-  text-shadow:
--2px -2px 0 #000,
-2px -2px 0 #000,
--2px 2px 0 #000,
-2px 2px 0 #000;
-  color: white;
+.logo {
+  width: 350px;
+  height: 90px;
+  margin-left: 8rem;
 }
 
 .word {
@@ -56,6 +50,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+textarea:disabled {
+  background-color: white;
 }
 
 .input {
@@ -80,10 +78,19 @@ img {
   display: inline-block;
 }
 
+.next-btn:hover {
+  color: dodgerblue;
+}
+
 .start-btn {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-top: 4rem;
   font-size: 1.5rem;
+  transition: all 0.1s linear;
+}
+
+.start-btn:hover {
+  color: dodgerblue;
 }
 
 .hint-inner {
@@ -128,6 +135,11 @@ img {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #bbb;
   color: black;
+  transition: all 0.1s linear;
+}
+
+.hint-front:hover {
+  color: dodgerblue;
 }
 
 .hint-back {
@@ -136,24 +148,26 @@ img {
   transform: rotateX(180deg);
 }
 
-footer {
-  margin-top: 12rem;
-}
-
-footer {
-  margin-top: 12rem;
+.game-footer {
+  padding-top: 5rem;
 }
 
 .glossary-link {
- background-color: rgb(190, 190, 190);
- color: white;
- font-size: 2rem;
+  color: grey;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.1s linear;
+}
+
+.glossary-link:hover {
+  color: dodgerblue;
+  text-decoration: underline;
 }
 
 .section2 {
   height: 40%;
   width: 20%;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .shredder-body {
