@@ -12,11 +12,17 @@ app.listen(port, () => {
 // pg for interfacing to database
 // read more: https://node-postgres.com/
 const { Client } = require('pg')
-const client = new Client({
-  database: 'project3',
-  // user: 'bam',
-  // password: '12345'
-})
+
+let databaseOptions = {}
+if (process.env.PRODUCTION) {
+  databaseOptions.connectionString = process.env.DATABASE_URL
+} else {
+  databaseOptions.database = 'project3'
+  // databaseOptions.user = 'bam' // for bam
+  // databaseOptions.password = '12345' // for bam
+}
+
+const client = new Client(databaseOptions)
 
 // Database Parameters.
 // Data Table names, etc.
