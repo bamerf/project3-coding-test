@@ -63,6 +63,12 @@ img {
   align-items: center;
 }
 
+.num-char {
+  opacity: 0.2;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
 textarea:disabled {
   background-color: white;
 }
