@@ -14,8 +14,8 @@ app.listen(port, () => {
 const { Client } = require('pg')
 const client = new Client({
   database: 'project3',
-  user: 'bam',
-  password: '12345'
+  // user: 'bam',
+  // password: '12345'
 })
 
 // Database Parameters.
@@ -77,7 +77,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/glossary', (req, res) => {
-  // client.connect()
+  client.connect()
   client.query('SELECT * FROM words', [], (err, dbresponse) => {
     res.render('glossary', {
       words: dbresponse.rows
