@@ -13,7 +13,9 @@ app.listen(port, () => {
 // read more: https://node-postgres.com/
 const { Client } = require('pg')
 const client = new Client({
-  database: 'project3'
+  database: 'project3',
+  user: 'bam',
+  password: '12345'
 })
 
 // Database Parameters.
