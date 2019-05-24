@@ -43,10 +43,12 @@ img {
   height: auto;
   border: 0;
 }
+
+/* ----header---- */
+
 nav.button{
   justify-content: flex-end;
 }
-
 
 .logoTitle{
   display: flex;
@@ -56,11 +58,11 @@ nav.button{
   height: auto;
 }
 
-a{
+a.header{
   margin: auto;
 }
 
-a img{
+a.header img{
   height: 100px;
   width: auto;
   opacity: .45;
