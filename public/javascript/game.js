@@ -1,7 +1,7 @@
 winCount = 0
 words = null
 wordindex = 0;
-gameTimeout = 10000;
+gameTimeout = 60000;
 
 // jQuery wait for page load
 $(document).ready(function() {
