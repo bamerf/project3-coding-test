@@ -82,7 +82,7 @@ function disableInput(){
   $('.input').prop('disabled', true);
 }
 
-function enableInput() {
+function resetInputField() {
   $('.input').prop('disabled', false);
   $('.input').css({outline: "none"})
 }
@@ -96,7 +96,7 @@ function showNextBtn() {
 }
 
 function startGameTimer() {
-  setTimeout(endOfGame,2000)
+  setTimeout(endOfGame,60000)
 }
 
 function endOfGame() {
