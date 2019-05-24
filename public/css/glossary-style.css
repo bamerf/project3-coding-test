@@ -43,27 +43,37 @@ img {
   height: auto;
   border: 0;
 }
+nav.button{
+  justify-content: flex-end;
+}
+
+
+.logoTitle{
+  display: flex;
+}
+.emptydiv{
+  width: 15VW;
+  height: auto;
+}
+
+a{
+  margin: auto;
+}
+
+a img{
+  height: 100px;
+  width: auto;
+  opacity: .45;
+  transition:.3s;
+}
+
+img:hover{
+  opacity: 1;
+} 
+
 
 .site-container {
   display: flex;
-}
-
-
-
-/* --- header logo --- */
-.logoTitle {
-  display: flex;
-  margin-left: 12rem;
-}
-
-.headerimg {
-  height: 100px;
-  margin: auto;
-  width: auto;
-}
-
-header nav {
-  margin-left: auto;
 }
 
 
