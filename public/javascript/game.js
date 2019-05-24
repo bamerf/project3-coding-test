@@ -82,7 +82,7 @@ function disableInput(){
   $('.input').prop('disabled', true);
 }
 
-function enableInput() {
+function resetInputField() {
   $('.input').prop('disabled', false);
   $('.input').css({outline: "none"})
 }
@@ -96,7 +96,7 @@ function showNextBtn() {
 }
 
 function startGameTimer() {
-  setTimeout(endOfGame,2000)
+  setTimeout(endOfGame,60000)
 }
 
 function endOfGame() {
@@ -145,39 +145,3 @@ function checkGuessChars(){
   console.log(`input is ${inputChars} and word is ${wordChars}`)
   $('.num-char').text(`${Number(wordChars - inputChars)}`);
 }
-
-    
-    // // Indicate number of characters
-    // $('.num-char').text(words[i].length)
-    // $('.input').keyup(function() {
-    //   $('.num-char').text(words[i].length - $('.input').val().length)
-    // })
-
-    // //Hints
-    // $('.hint1').children('.hint-inner').children
-    // ('.hint-back').text(words[i].hint1)
-    // $('.hint2').children('.hint-inner').children('.hint-back').text(words[i].hint2)
-    // $('.hint3').children('.hint-inner').children('.hint-back').text(words[i].hint3)
-    // $('.hint1').on('click', function(e) {
-    //   e.target.closest('.hint1').classList.add('reveal')
-    // })
-
-    // do {
-      //Correct Answer
-
-      // if($('.input').val() == words[i].word) {
-      //   $('.input').css({outline: "solid green"})
-      //     // winCount += 1;
-      //     console.log("you guessed right!")
-      // }
-
-      // $('.input').keyup(function() {
-      //   if (words[i] === $('.input').val()) {
-      //     $('.input').css({outline: "solid green"})
-          
-      //     winCount += 1;
-      //   }
-      // })
-    // } while(words[i] !== $('.input').val())
-
-  // }
