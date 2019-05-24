@@ -66,9 +66,7 @@ function wordCorrect(){
 }
 
 function nextWord(){
-  console.log(`current wordindex: ${wordindex}`)
   wordindex += 1;
-  console.log(`new wordindex: ${wordindex}`)
   resetInputField()
   clearInput()
   startGameCSS()
@@ -85,14 +83,15 @@ function disableInput(){
 function resetInputField() {
   $('.input').prop('disabled', false);
   $('.input').css({outline: "none"})
+  $('.input').attr('maxlength',words[wordindex].word.length);
 }
 
 function hideNextBtn() {
-  $('.next-btn').fadeOut("fast")  
+  $('.next-btn').css({visibility: "hidden"})
 }
 
 function showNextBtn() {
-  $('.next-btn').fadeIn("fast")
+  $('.next-btn').css({visibility: "visible"})
 }
 
 function startGameTimer() {
@@ -137,6 +136,7 @@ function showHint3(){
 
 function correctGuessCSS(){
   $('.input').css({outline: "solid green"})
+  showNextBtn()
 }
 
 function checkGuessChars(){
