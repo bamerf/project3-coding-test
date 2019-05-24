@@ -6,16 +6,16 @@ wordindex = 0;
 $(document).ready(function() {
   // Get all the words from the DB
   getWords()
-  disableInput();
-  $('.start-btn').on('click', playGame)
+  disableInput()
+  $('.start-btn').on('click', startGame)
   $('.next-btn').click(nextWord)
-  $('.hint2').on('click', showHint2)
-  $('.hint3').on('click', showHint3)
 })
 
-const playGame = () => {
+const startGame = () => {
   startGameCSS()
   startGameTimer()
+  $('.hint2').on('click', showHint2)
+  $('.hint3').on('click', showHint3)
   $('.input').keyup(checkUserGuess)
 }
 
@@ -46,8 +46,9 @@ function startGameCSS(){
   setInputHeight(getWordCount(words[wordindex].word))
   resetInputField()
   hideNextBtn()
-  hideHints();
+  hideHints()
   loadHints()
+  checkGuessChars()
 }
 
 function checkUserGuess(){
@@ -55,6 +56,7 @@ function checkUserGuess(){
   if(guess == words[wordindex].word.toLowerCase()){
     wordCorrect()
   }
+  checkGuessChars()
 }
 
 function wordCorrect(){
@@ -137,17 +139,12 @@ function correctGuessCSS(){
   $('.input').css({outline: "solid green"})
 }
 
-
-
-  // Loop through the words
-  // for(let i = 0; i < words.length;) {
-
-    // if($('.input').val() == words[i].word) {
-    //   $('.input').css({outline: "solid green"})
-    //   // winCount += 1;
-    //   i++;
-    //   console.log("you guessed right!")
-    // }
+function checkGuessChars(){
+  let inputChars = $('.input').val().length
+  let wordChars = words[wordindex].word.length;
+  console.log(`input is ${inputChars} and word is ${wordChars}`)
+  $('.num-char').text(`${Number(wordChars - inputChars)}`);
+}
 
     
     // // Indicate number of characters
@@ -165,8 +162,6 @@ function correctGuessCSS(){
     //   e.target.closest('.hint1').classList.add('reveal')
     // })
 
-<<<<<<< HEAD
-=======
     // do {
       //Correct Answer
 
@@ -185,5 +180,4 @@ function correctGuessCSS(){
       // })
     // } while(words[i] !== $('.input').val())
 
->>>>>>> game post route made
   // }
