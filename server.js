@@ -18,8 +18,8 @@ if (process.env.PRODUCTION) {
   databaseOptions.connectionString = process.env.DATABASE_URL
 } else {
   databaseOptions.database = 'project3'
-  // databaseOptions.user = 'bam' // for bam
-  // databaseOptions.password = '12345' // for bam
+  databaseOptions.user = 'bam' // for bam
+  databaseOptions.password = '12345' // for bam
 }
 
 const client = new Client(databaseOptions)
