@@ -47,6 +47,7 @@ img {
   width: 350px;
   height: 90px;
   margin-left: 8rem;
+  opacity: 0.9;
 }
 
 .word {
@@ -78,22 +79,22 @@ textarea:disabled {
   border-bottom: 2px solid dodgerblue;
 }
 
-.num-char {
-  display: inline-block;
-}
-
 .next-btn:hover {
   color: dodgerblue;
 }
 
 .start-btn {
   margin-top: 4rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  background-color: white;
   transition: all 0.1s linear;
 }
 
 .start-btn:hover {
   color: dodgerblue;
+  font-size: 2.2rem;
 }
 
 .hint-inner {
