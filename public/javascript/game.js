@@ -1,6 +1,7 @@
 winCount = 0
 words = null
 wordindex = 0;
+gameTimeout = 10000;
 
 // jQuery wait for page load
 $(document).ready(function() {
@@ -12,8 +13,10 @@ $(document).ready(function() {
 })
 
 const startGame = () => {
+  resetWinCount()
   startGameCSS()
   startGameTimer()
+  startShredderAnimation()
   $('.hint2').on('click', showHint2)
   $('.hint3').on('click', showHint3)
   $('.input').keyup(checkUserGuess)
@@ -60,6 +63,7 @@ function checkUserGuess(){
 }
 
 function wordCorrect(){
+  incrementWinCount()
   disableInput()
   showNextBtn()
   correctGuessCSS()
@@ -84,6 +88,7 @@ function resetInputField() {
   $('.input').prop('disabled', false);
   $('.input').css({outline: "none"})
   $('.input').attr('maxlength',words[wordindex].word.length);
+  $('.input').focus()
 }
 
 function hideNextBtn() {
@@ -95,18 +100,19 @@ function showNextBtn() {
 }
 
 function startGameTimer() {
-  setTimeout(endOfGame,60000)
+  setTimeout(endOfGame,gameTimeout)
 }
 
 function endOfGame() {
-  console.log('game has ended!')
   disableInput()
   hideNextBtn()
+  stopShredderAnimation()
   showEndGameOverlay()
 }
 
 function showEndGameOverlay() {
   $('.overlay').css({visibility: 'visible'})
+  updateResultsCSS()
 }
 
 function showHint1(){
@@ -141,6 +147,41 @@ function correctGuessCSS(){
 function checkGuessChars(){
   let inputChars = $('.input').val().length
   let wordChars = words[wordindex].word.length;
-  console.log(`input is ${inputChars} and word is ${wordChars}`)
-  $('.num-char').text(`${Number(wordChars - inputChars)} characters left`);
+  $('.num-char').text(`${Number(wordChars - inputChars)}`);
+}
+
+function startShredderAnimation(){
+  $('.shredder-body').css("animation-play-state", "running");
+  $('.resume').css("animation-play-state", "running");
+  $('.resume-shred').css("animation-play-state", "running");
+  $('.resume-shred-1').css("animation-play-state", "running");
+  $('.resume-shred-2').css("animation-play-state", "running");
+}
+
+function stopShredderAnimation(){
+  $('.shredder-body').css("animation-play-state", "paused");
+  $('.resume').css("animation-play-state", "paused");
+  $('.resume-shred').css("animation-play-state", "paused");
+  $('.resume-shred-1').css("animation-play-state", "paused");
+  $('.resume-shred-2').css("animation-play-state", "paused");
+}
+
+function resetWinCount(){
+  winCount = 0
+}
+
+function incrementWinCount(){
+  winCount += 1
+}
+
+function updateResultsCSS(){
+  let resultString = ""
+  if(winCount < 1){
+    resultString = `You got no terms right..`
+  }else if(winCount == 1){
+    resultString = `You got ${winCount} term right!`
+  }else{
+    resultString = `You got ${winCount} terms right!`
+  }
+  $('.results-wincount').text(resultString);
 }

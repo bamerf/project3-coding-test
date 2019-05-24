@@ -1,3 +1,7 @@
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -83,7 +87,6 @@ textarea:disabled {
 }
 
 .start-btn {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-top: 4rem;
   font-size: 1.5rem;
   transition: all 0.1s linear;
@@ -132,7 +135,6 @@ textarea:disabled {
 }
 
 .hint-front {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #bbb;
   color: black;
   transition: all 0.1s linear;
@@ -178,12 +180,14 @@ textarea:disabled {
   animation-iteration-count: infinite;
   animation-delay: 0.5s;
   transform-origin: 50% 50%;
+  animation-play-state: paused;
 }
 .resume {
     animation-name: shred1;
     animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-play-state: paused;
 }
 
 .resume-shred {
@@ -192,6 +196,7 @@ textarea:disabled {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-delay: 0s;
+  animation-play-state: paused;
 }
 .resume-shred-1 {
   animation-name: shred-paper;
@@ -199,6 +204,7 @@ textarea:disabled {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-delay: 0.75s;
+  animation-play-state: paused;
 }
 .resume-shred-2 {
   animation-name: shred-paper;
@@ -206,6 +212,7 @@ textarea:disabled {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-delay: 1.5s;
+  animation-play-state: paused;
 }
 
 @keyframes shred-paper{
