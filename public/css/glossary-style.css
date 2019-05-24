@@ -48,16 +48,25 @@ img {
   display: flex;
 }
 
-img.headerimg{
+
+
+/* --- header logo --- */
+.logoTitle {
+  display: flex;
+  margin-left: 12rem;
+}
+
+.headerimg {
   height: 100px;
   margin: auto;
   width: auto;
 }
 
-h1.logoTitle{
-  display: flex;
-  margin-left: 12rem;
+header nav {
+  margin-left: auto;
 }
+
+
 
 
 /* --- Sidebar --- */
