@@ -115,8 +115,7 @@ function showHint1(){
 }
 
 function loadHints(){
-    $('.hint1').children('.hint-inner').children
-    ('.hint-back').text(words[wordindex].hint1)
+    $('.hint1').children('.hint-inner').children('.hint-back').text(`${words[wordindex].hint1} (${'x'} characters and ${'x'} words)`)
     $('.hint2').children('.hint-inner').children('.hint-back').text(words[wordindex].hint2)
     $('.hint3').children('.hint-inner').children('.hint-back').text(words[wordindex].hint3)
 }
@@ -143,5 +142,5 @@ function checkGuessChars(){
   let inputChars = $('.input').val().length
   let wordChars = words[wordindex].word.length;
   console.log(`input is ${inputChars} and word is ${wordChars}`)
-  $('.num-char').text(`${Number(wordChars - inputChars)}`);
+  $('.num-char').text(`${Number(wordChars - inputChars)} characters left`);
 }
