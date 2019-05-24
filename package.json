@@ -4,7 +4,7 @@
   "description": "A game designed to help with revision of terms learned throughout our Software Engineering Immersive.",
   "main": "jquery.lettering-0.6.1.min.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js" // changed from nodemon
   },
   "repository": {
     "type": "git",
