@@ -142,6 +142,7 @@ textarea:disabled {
 }
 
 .hint-front {
+  padding-top: 1rem;
   background-color: #bbb;
   color: black;
   transition: all 0.1s linear;
@@ -152,6 +153,7 @@ textarea:disabled {
 }
 
 .hint-back {
+  padding-top: 0.5rem;
   background-color: dodgerblue;
   color: white;
   transform: rotateX(180deg);
@@ -262,6 +264,12 @@ svg {
 
 .next-btn{
   visibility: hidden;
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  background-color: white;
+  transition: all 0.1s linear;
 }
 
 .results-wincount{
