@@ -96,7 +96,7 @@ app.get('/api/words', (req, res) => {
 
 app.get('/game', (req, res) => {
   res.render('game', {
-    name: "Mister Meeseeks"
+    name: "Peter Griffin"
   });
 })
 
