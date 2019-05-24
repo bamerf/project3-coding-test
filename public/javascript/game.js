@@ -147,7 +147,7 @@ function correctGuessCSS(){
 function checkGuessChars(){
   let inputChars = $('.input').val().length
   let wordChars = words[wordindex].word.length;
-  $('.num-char').text(`${Number(wordChars - inputChars)}`);
+  $('.num-char').text(`${Number(wordChars - inputChars)} characters left`);
 }
 
 function startShredderAnimation(){
